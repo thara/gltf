@@ -379,10 +379,10 @@ type Sampler struct {
 	Extensions Extensions   `json:"extensions,omitempty"`
 	Extras     interface{}  `json:"extras,omitempty"`
 	Name       string       `json:"name,omitempty"`
-	MagFilter  MagFilter    `json:"magFilter,omitempty" validate:"lte=1"`
-	MinFilter  MinFilter    `json:"minFilter,omitempty" validate:"lte=5"`
-	WrapS      WrappingMode `json:"wrapS,omitempty" validate:"lte=2"`
-	WrapT      WrappingMode `json:"wrapT,omitempty" validate:"lte=2"`
+	MagFilter  MagFilter    `json:"magFilter" validate:"lte=1"`
+	MinFilter  MinFilter    `json:"minFilter" validate:"lte=5"`
+	WrapS      WrappingMode `json:"wrapS" validate:"lte=2"`
+	WrapT      WrappingMode `json:"wrapT" validate:"lte=2"`
 }
 
 // Image data used to create a texture. Image can be referenced by URI or bufferView index.
